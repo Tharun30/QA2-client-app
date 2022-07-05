@@ -75,7 +75,7 @@ const NavBar = () => {
       },
     });
   }, [currentValue, value]);
-  // console.log("---->In the Navbar", finalState, currentValue);
+  console.log("---->In the Navbar", finalState, currentValue);
 
   const [isOpen, setIsOpen] = useState(false);
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -138,6 +138,8 @@ const NavBar = () => {
                       loginWithRedirect({
                         ...finalState,
                         aai: JSON.stringify(finalState.aai),
+                        source: "suhas-test",
+                        // connectionName: "AV-Migration-Pwd-Authentication",
                         // affid: AffId(),
                         // fragment: `culture=en-us&aff_id=105`,
                         // &aai=${JSON.stringify(
